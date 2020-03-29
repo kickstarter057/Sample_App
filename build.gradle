@@ -1,6 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    ext.dagger_version = '2.24'
+    ext.arch_Version = '1.1.1'
+    ext.glide_Version = '4.10.0'
     ext.kotlin_version = '1.3.50'
     repositories {
         google()

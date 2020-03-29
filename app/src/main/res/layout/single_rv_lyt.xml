@@ -1,0 +1,58 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="data"
+            type="com.sampleapp.homePage.model.repoModel.HomepageModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lyt_container"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            loadImage="@{data.avatar}"
+            android:layout_marginTop="16dp"
+            android:layout_width="40dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_height="40dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{data.author}"
+                android:textSize="12sp"
+                android:maxLines="1"
+                tools:text="mBinadasfdasfdfasdfdafsdsafdfasdfsdfsdfsadfsdfadfsdasfadsffdasdfasfdasdfasry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/black"
+                android:maxLines="1"
+                android:text="@{data.name}"
+                android:textSize="16sp"
+                tools:text="USCTC-CS-COURESsdafdsfaadsfdasfdasfdasfadfsdafsafdsdafsdfasadsfE_REPO" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
