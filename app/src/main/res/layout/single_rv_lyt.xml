@@ -9,11 +9,16 @@
             name="data"
             type="com.sampleapp.homePage.model.repoModel.HomepageModel" />
 
+        <variable
+            name="handler"
+            type="com.sampleapp.homePage.handler.RepoRvHandler" />
+
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="@{(v)->handler.startDetailsActivity(data)}"
         android:id="@+id/lyt_container"
         android:orientation="horizontal"
         android:padding="16dp">

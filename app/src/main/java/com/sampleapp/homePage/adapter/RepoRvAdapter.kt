@@ -6,6 +6,7 @@ import android.widget.Filter
 import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.sampleapp.databinding.SingleRvLytBinding
+import com.sampleapp.homePage.handler.RepoRvHandler
 import com.sampleapp.homePage.model.repoModel.HomepageModel
 
 class RepoRvAdapter(val mList:ArrayList<HomepageModel>) : RecyclerView.Adapter<RepoRvAdapter.MyHolder>(), Filterable {
@@ -52,6 +53,7 @@ class RepoRvAdapter(val mList:ArrayList<HomepageModel>) : RecyclerView.Adapter<R
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
         holder.mBinding.data= mList[position]
+        holder.mBinding.handler = RepoRvHandler(holder.mBinding.root.context)
         holder.mBinding.executePendingBindings()
     }
 

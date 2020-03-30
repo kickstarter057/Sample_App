@@ -15,4 +15,11 @@ object BindingAdapter {
             .apply(RequestOptions.circleCropTransform())
             .into(img)
     }
+
+    @JvmStatic
+    fun loadImageDetails(img: ImageView, url: String?) {
+        Glide.with(img.context.applicationContext)
+            .load(url)
+            .into(img)
+    }
 }

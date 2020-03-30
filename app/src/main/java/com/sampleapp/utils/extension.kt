@@ -7,9 +7,11 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.RecyclerView
 import com.sampleapp.R
 
-fun <A : AppCompatActivity> A.setToolbar(toolbar:Toolbar,title:String) {
+fun <A : AppCompatActivity> A.setToolbar(toolbar:Toolbar,title:String,homeButton:Boolean=false,homeAsUp:Boolean=false) {
     toolbar.findViewById<TextView>(R.id.title).text=title
     setSupportActionBar(toolbar)
+    supportActionBar?.setDisplayHomeAsUpEnabled(homeAsUp)
+    supportActionBar?.setDisplayShowHomeEnabled(homeButton)
 }
 
 fun <A:AppCompatActivity> A.showToast(msg:String?) {

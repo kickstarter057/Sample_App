@@ -7,6 +7,9 @@
         <variable
             name="data"
             type="com.sampleapp.homePage.model.developerModel.DeveloperModel" />
+        <variable
+            name="handler"
+            type="com.sampleapp.homePage.handler.DevRvHandler" />
 
     </data>
 
@@ -14,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/lyt_container"
+        android:onClick="@{(v)->handler.startDetailsActivity(data)}"
         android:orientation="horizontal"
         android:padding="16dp">
 
